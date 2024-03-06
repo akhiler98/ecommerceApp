@@ -1,0 +1,53 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import './Mobile.css'
+import { Link, useNavigate } from "react-router-dom";
+
+export const Samsung = () =>{
+    const [data, setData] = useState([])
+    const navigate = useNavigate();
+
+    const fetchData = async () => {
+        const response = await fetch('http://www.ekart.test/api/samsung');
+        const datas = await response.json();
+        setData(datas)
+        
+    }
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    // const showdetail = (id) =>{
+
+
+    // }
+    return(
+        <>
+        <div className="mobiles_header">
+        <h2>Samsung Smartphones</h2>
+        <button className="mobiles_btn">VIEW ALL</button>
+    </div>
+    <div className="mobiles_list">
+
+        {
+            data.map((item)=>{
+                return(
+                <>
+                    <div className="mobiles_list-card" onClick={()=>{ navigate(`/productDetail/${item.id}`)}} >
+                        <div className="image-div">
+                           <img src={item.image} className="image" alt="" />
+                        </div>
+                        <div className="mobiles_list-card_content">
+                          <p>{item.name}</p>
+                          <h6>{item.rating}</h6>
+                           <h3>{item.price}</h3>
+                        </div>
+                    </div>
+                </>
+                )
+            })
+        }
+    </div>
+    </>
+    )
+}

@@ -1,0 +1,79 @@
+.container{
+    margin: 0%;
+}
+.container_header{
+    height: 180px;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+}
+.mobiles_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding-inline: 20px;
+    margin-top: 15px;
+    height: 100px;
+    border: 0.1px solid gainsboro;
+}
+.mobiles_btn{
+    height: 40px;
+    background-color: #2874f0;
+    color: white;
+}
+.mobiles_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 0.1px solid gainsboro;
+   
+}
+.mobiles_list-card{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    /* border: 0.1px solid gainsboro;
+    margin: 8px;
+    margin-block: 15px; */
+    
+   
+}
+.mobiles_list-card_content{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.image-div{
+    height: 200px;
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+.image{
+    width: 150px;
+    height: 175px; 
+}
+
+
+.mobiles_list-card h6{
+    width: 40px;
+    height: 20px;
+    color: white;
+    background-color: green;
+    justify-self: flex-end;
+}
+
+.apple-image{
+    width: 140px;
+    margin-top: 10px;
+}
+.redmi-image{
+    width: 140px;
+    margin-top: 10px;
+}

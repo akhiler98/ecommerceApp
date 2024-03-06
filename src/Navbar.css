@@ -1,0 +1,26 @@
+.navbar{
+    /* position: fixed; */
+    width: 100vw;
+    height: 180px;
+    background-color: #2874f0;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+  }
+  .navbar_btn{
+    width: 120px;
+    height: 35px;
+    font-size: 15px;
+  }
+  .navbar_search{
+    width: 400px;
+    height: 35px;
+  }
+  .navbar_link{
+    color: white;
+    text-decoration: none;
+  }
