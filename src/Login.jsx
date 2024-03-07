@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Signup.css'
 import { useEffect } from "react";
 import { useState } from "react";
