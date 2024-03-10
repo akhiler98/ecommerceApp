@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import './Mobile.css'
+import { useNavigate } from "react-router-dom";
 
 export const Apple = () =>{
     const [data, setData] = useState([])
+    const navigate = useNavigate();
 
     const fetchData = async () => {
         const response = await fetch('http://www.ekart.test/api/apple');
@@ -27,7 +29,8 @@ export const Apple = () =>{
     {
         data.map((item,index)=>{
             return(
-                <div className="mobiles_list-card">
+                <>
+                <div className="mobiles_list-card" onClick={()=>{ navigate(`/productDetail/${item.id}`)}}>
                     <div className="image-div">
                        <img src={item.image} className="image" alt="" />
                     </div>
@@ -36,7 +39,8 @@ export const Apple = () =>{
                       <h6>{item.rating}</h6>
                        <h3>{item.price}</h3>
                     </div>
-            </div>
+                </div>
+            </>
             )
         })
       }

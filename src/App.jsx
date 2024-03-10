@@ -10,6 +10,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Signup } from './Signup'
 import { Login } from './Login'
 import ProductDetail from './ProductDetail'
+import Cart from './Cart'
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/productDetail/:id" element={<ProductDetail/>} />
+        <Route path="/cart/:user-id" element={<Cart/>} />
     
     </Routes>
   </BrowserRouter>

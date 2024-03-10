@@ -36,3 +36,9 @@
     margin-inline: auto;
     text-align: left;
 }
+.alert{
+    position: absolute;
+    margin-left: 600px;
+    font-size: 20px;
+    color: green;
+}

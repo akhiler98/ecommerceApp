@@ -54,7 +54,7 @@ export const Navbar = () =>{
             <h4>{profile}</h4>
             <a href="" className='navbar_link'>Become a Seller</a>
             <a href="" className='navbar_link'>More </a>
-            <a href="" className='navbar_link'>Cart</a>
+            <Link to="/cart/:user-id">Cart</Link>
            
         </div>
         </>
