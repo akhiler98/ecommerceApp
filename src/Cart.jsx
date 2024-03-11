@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 function Cart() {
 
     const[product,setProduct] = useState([])
+    const[quantity,setQuantity] = useState(0)
     
     
  
@@ -29,24 +30,16 @@ function Cart() {
         fetchData()
      }
 
-    //  const totalPrice =()=>{
-    
-    //     product.map(item=>{
-    //         const valueWithCurrency = item.price
-    //         let result = valueWithCurrency.replace(/CZK/g, '')
-    //        console.log(result);
-    //     })
-        
-    //  }
-
-
      useEffect(() => {
          fetchData()
      }, [])
 
-    //  useEffect(() => {
-    //     totalPrice()
-    // }, [])
+
+     const handleChange=(e)=>{
+        setQuantity(e.target.value)
+     }
+
+   
 
   return (
     <>
@@ -69,6 +62,15 @@ function Cart() {
                         <h3>{item.name}</h3>
                         <p>color:{item.color}</p>
                         <p><strong>price:</strong>{item.price}</p>
+                        <div>
+                           <select value={item.quantity} onChange={handleChange}>
+                
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                          </select>
+                        </div>
                         <button onClick={()=>{remove(item.id)}}>Delete</button>
                     </div>
                 </div>
